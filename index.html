@@ -221,11 +221,28 @@
             <h4>Meu primeiro post</h4>
             <p class="autor" style="margin-bottom: 10px;">Por: Carlos Sell</p>
             <p style="margin: 0;">Site onde você pode tirar suas dúvidas sobre a liturgia.</p>
+            
             <div class="botoes-reacao">
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+                <button onclick="computarCoracao()">❤️ <span id="contador-coracao">0</span></button>
+                <button onclick="computarLike()">👍 <span id="contador-like">0</span></button>
             </div>
         </div>
+    </main>
+
+    <script>
+        let qteCoracoes = 0;
+        let qteLikes = 0;
+
+        function computarCoracao() {
+            qteCoracoes++;
+            document.getElementById("contador-coracao").innerText = qteCoracoes;
+        }
+
+        function computarLike() {
+            qteLikes++;
+            document.getElementById("contador-like").innerText = qteLikes;
+        }
+    </script>
     </main>
 
 </body>
